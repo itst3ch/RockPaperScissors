@@ -11,7 +11,8 @@ namespace RockPaperScissors
 
         public static void Menu()
         {
-            start:
+        start:
+            Console.Title = "Main Menu";
             Console.WriteLine("Type the number of which option you would like: ");
             Console.WriteLine("1. Play");
             Console.WriteLine("2. Exit");
@@ -34,7 +35,8 @@ namespace RockPaperScissors
 
         public static void Game()
         {
-            Game:
+        Game:
+            Console.Title = "Rock Paper Scissors";
             Console.Write("Please input rock/paper/scissors/exit: ");
             string input = Convert.ToString(Console.ReadLine());
             input = input.ToLower();
