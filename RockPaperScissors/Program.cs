@@ -68,45 +68,54 @@ namespace RockPaperScissors
             {
                 if (scissors)
                 {
-                    Console.WriteLine("The computer chose scissors, you win!");
+                    Console.WriteLine("The computer chose scissors, you win! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else if (compchoice == input)
                 {
-                    Console.WriteLine("It's a tie!");
+                    Console.WriteLine("It's a tie! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else
                 {
-                    Console.WriteLine("The computer chose " + compchoice + ", you lose");
+                    Console.WriteLine("The computer chose " + compchoice + ", you lose. Play again? [Y/N]");
+                    PlayAgain();
                 }
             }
             else if (input == "paper")
             {
                 if (rock)
                 {
-                    Console.WriteLine("The computer chose rock, you win!");
+                    Console.WriteLine("The computer chose rock, you win! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else if (compchoice == input)
                 {
-                    Console.WriteLine("It's a tie!");
+                    Console.WriteLine("It's a tie! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else
                 {
-                    Console.WriteLine("The computer chose " + compchoice + ", you lose");
+                    Console.WriteLine("The computer chose " + compchoice + ", you lose. Play again? [Y/N]");
+                    PlayAgain();
                 }
             }
             else if (input == "scissors")
             {
                 if (paper)
                 {
-                    Console.WriteLine("The computer chose paper, you win!");
+                    Console.WriteLine("The computer chose paper, you win! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else if (compchoice == input)
                 {
-                    Console.WriteLine("It's a tie!");
+                    Console.WriteLine("It's a tie! Play again? [Y/N]");
+                    PlayAgain();
                 }
                 else
                 {
-                    Console.WriteLine("The computer chose " + compchoice + ", you lose");
+                    Console.WriteLine("The computer chose " + compchoice + ", you lose. Play again? [Y/N]");
+                    PlayAgain();
                 }
             }
             else if (input == "exit")
@@ -118,6 +127,29 @@ namespace RockPaperScissors
             {
                 Console.WriteLine("Invalid response.");
                 goto Game;
+            }
+        }
+
+        public static void PlayAgain()
+        {
+        test:
+            string again = Convert.ToString(Console.ReadLine());
+            again = again.ToUpper();
+            if (again == "Y")
+            {
+                Console.Clear();
+                Game();
+            }
+            else if (again == "N")
+            {
+                Console.Clear();
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Invalid response");
+                Console.WriteLine("Play again? [Y/N]");
+                goto test;
             }
         }
     }
